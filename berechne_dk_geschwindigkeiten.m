@@ -21,10 +21,10 @@ function rob = berechne_dk_geschwindigkeiten(rob)
         % Absolute Winkelgeschwindigkeit berechnen
         % ----------------------------------------
        
-       rob.kl(i).A_iv = Az(rob.q(i))*Ax(rob.kl(i).alpha);
+        rob.kl(i).A_iv = Az(rob.q(i))*Ax(rob.kl(i).alpha);
         %%%%% Drehmatrix vom B0-KOS ins Bi-KOS:
         if(i==1)
-            rob.kl(i).A_i0 = rob.kl(i).A_iv;
+        rob.kl(i).A_i0 = rob.kl(i).A_iv;
         else
         rob.kl(i).A_i0 = rob.kl(i).A_iv*rob.kl(i-1).A_i0;%%%%%%
         end
